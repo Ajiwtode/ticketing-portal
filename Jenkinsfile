@@ -3,7 +3,7 @@ pipeline {
 
     stages {
 
-        stage('Clone Code') {
+        stage('Clone Repository') {
             steps {
                 git 'https://github.com/Ajiwtode/ticketing-portal.git'
             }
