@@ -15,6 +15,12 @@ pipeline {
             }
         }
 
+        stage('Build Frontend Image') {
+            steps {
+                sh 'docker build -t ticketing-frontend ./frontend'
+            }
+        }
+
         stage('Deploy to Kubernetes') {
             steps {
                 sh 'kubectl apply -f k8s/backend-deployment.yaml'
