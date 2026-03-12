@@ -5,7 +5,8 @@ pipeline {
 
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/Ajiwtode/ticketing-portal.git'
+                git  'https://github.com/Ajiwtode/ticketing-portal.git'
+
             }
         }
 
