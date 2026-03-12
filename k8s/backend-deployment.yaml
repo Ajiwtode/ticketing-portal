@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ticketing-backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ticketing-backend
+  template:
+    metadata:
+      labels:
+        app: ticketing-backend
+    spec:
+      containers:
+      - name: backend
+        image: ticketing-backend
+        ports:
+        - containerPort: 5000
